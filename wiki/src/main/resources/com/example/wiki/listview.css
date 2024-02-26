@@ -1,0 +1,28 @@
+/* Stylesheet per la ListView */
+.list-view {
+    -fx-background-color: #edf2fb; /* Colore di sfondo della ListView */
+}
+
+/* Stile degli elementi nella ListView */
+.list-cell {
+    -fx-padding: 5 10; /* Padding degli elementi della lista */
+    -fx-font-size: 14px; /* Dimensione del carattere degli elementi della lista */
+}
+
+/* Stile degli elementi selezionati nella ListView */
+.list-cell:selected {
+    -fx-background-color: #abc4ff; /* Colore di sfondo degli elementi selezionati */
+    -fx-text-fill: Black; /* Colore del testo degli elementi selezionati */
+}
+
+/* Stile del focus sugli elementi della ListView */
+.list-cell:focused {
+    -fx-background-color: #b6ccfe; /* Colore di sfondo quando l'elemento ha il focus */
+    -fx-border-color: #abc4ff; /* Colore del bordo quando l'elemento ha il focus */
+    -fx-font-weight: bold; /* Testo in grassetto per gli elementi selezionati */
+}
+
+/* Rimuove il bordo evidenziato della ListView */
+.list-view:focused {
+    -fx-faint-focus-color: transparent;
+}

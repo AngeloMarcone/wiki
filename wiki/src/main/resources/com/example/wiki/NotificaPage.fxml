@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wiki.gui.NotificaPageController">
+   <top>
+      <AnchorPane prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: abc4ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="72.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logowiki.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="homeButton" layoutX="515.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToHomePage" style="-fx-background-color: abc4ff; -fx-text-fill: FFF;" text="Home">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="accettaButton" layoutX="139.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleAccettaButton" style="-fx-background-color: c1d3fe;" text="Accetta Modifica">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="rifiutaButton" layoutX="315.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleRifiutaButton" style="-fx-background-color: c1d3fe;" text="Rifiuta Modifica">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="3.0" prefHeight="34.0" prefWidth="600.0" text="Frase Originale:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="90.0" prefHeight="34.0" prefWidth="600.0" text="Frase Modificata:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="utenteLabel" alignment="TOP_LEFT" layoutX="100.0" layoutY="201.0" prefHeight="19.0" prefWidth="247.0" />
+            <Label alignment="CENTER" layoutX="5.0" layoutY="193.0" prefHeight="34.0" prefWidth="84.0" text="Proposta da:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="autoreLabel" alignment="TOP_LEFT" layoutX="99.0" layoutY="235.0" prefHeight="19.0" prefWidth="229.0" />
+            <Label alignment="CENTER" layoutX="4.0" layoutY="227.0" prefHeight="34.0" prefWidth="84.0" text="Autore Post:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="paginaLabel" alignment="TOP_LEFT" layoutX="412.0" layoutY="201.0" prefHeight="19.0" prefWidth="191.0" />
+            <Label alignment="CENTER" layoutX="326.0" layoutY="193.0" prefHeight="34.0" prefWidth="100.0" text="Pagina:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dataLabel" alignment="TOP_LEFT" layoutX="412.0" layoutY="235.0" prefHeight="19.0" prefWidth="190.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="294.0" layoutY="227.0" prefHeight="34.0" prefWidth="107.0" text="Data/Ora:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="fraseOriginaleLabel" layoutX="18.0" layoutY="37.0" prefHeight="51.0" prefWidth="567.0" />
+            <TextArea fx:id="fraseModificataLabel" layoutX="19.0" layoutY="124.0" prefHeight="51.0" prefWidth="567.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
