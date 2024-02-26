@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: abc4ff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wiki.gui.HomeController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-4.0" layoutY="-4.0" prefHeight="316.0" prefWidth="464.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+               <children>
+                  <AnchorPane prefHeight="67.0" prefWidth="479.0">
+                     <children>
+                        <TextField fx:id="searchBar" layoutY="15.0" prefHeight="37.0" prefWidth="360.0" promptText="Cerca il TItolo della pagina" style="-fx-background-color: edf2fb;">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font></TextField>
+                        <Button fx:id="searchButton" layoutX="372.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="38.0" prefWidth="88.0" style="-fx-background-color: c1d3fe;">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@lente.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <ListView fx:id="listView" onMouseClicked="#handleListViewClick" prefHeight="245.0" prefWidth="460.0" style="-fx-background-color: edf2fb; " stylesheets="@listview.css" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="307.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="312.0" prefWidth="188.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="176.0" fitWidth="126.0" layoutY="-53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logowiki.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="loginButton" layoutX="25.0" layoutY="267.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: c1d3fe;" text="Login">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="signupButton" layoutX="26.0" layoutY="219.0" mnemonicParsing="false" onAction="#goToSignUpPage" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: c1d3fe;" text="Sign Up">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="refreshButton" layoutX="26.0" layoutY="166.0" mnemonicParsing="false" onAction="#handleRefreshButton" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: c1d3fe;" text="Refresh">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="createPageButton" layoutX="26.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToCreatePage" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: c1d3fe;" text="NewPage">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="profileButton" layoutX="26.0" layoutY="65.0" mnemonicParsing="false" onAction="#goToProfilePage" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: c1d3fe;" text="Profilo">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="51.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="logoutButton" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: c1d3fe;" text="Logout">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children></HBox>
+   </top>
+</BorderPane>
